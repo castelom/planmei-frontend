@@ -1,0 +1,253 @@
+.home-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .logo-area img {
+    width: 50px;
+    height: auto;
+  }
+  
+  .logo-area h1 {
+    font-size: 28px;
+    color: #1958a0;
+  }
+  
+  .empresa-info {
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .seta {
+    font-size: 20px;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 40px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .menu a {
+    font-size: 17px;
+    color: #444;
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: 8px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: #1958a0;
+  }
+  
+  .menu .active {
+    border-bottom: 3px solid #1958a0;
+    color: #1958a0;
+    font-weight: 700;
+  }
+  
+  .alerta {
+    background-color: #fff8dc;
+    padding: 15px 20px;
+    border-left: 5px solid #ff9900;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    border-radius: 5px;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 25px 20px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px; /* altura mínima consistente */
+  }
+  
+  .card .titulo {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  
+  .card .valor {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .card.verde .valor {
+    color: #1b9a59;
+  }
+  
+  .card.azul .valor {
+    color: #1976d2;
+  }
+  
+  .card.vermelho .valor {
+    color: #d32f2f;
+  }
+  
+  .card .valor.preto {
+    color: #000;
+  }
+  
+  .card img {
+    margin-top: 15px;
+    width: 45px;
+    align-self: flex-start;
+  }
+  
+  .card:not(:has(img))::after {
+    content: "";
+    display: block;
+    height: 45px; /* altura da imagem simulada */
+    margin-top: 15px;
+  }
+  
+  .meta-faturamento .titulo {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #222;
+  }
+  
+  .barra {
+    background: #e0e0e0;
+    border-radius: 15px;
+    height: 20px;
+    position: relative;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  
+  .progresso {
+    background: #2e7d32;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    transition: width 0.5s ease;
+  }
+  
+  .porcentagem {
+    position: absolute;
+    right: 15px;
+    top: -30px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    user-select: none;
+  }
+  
+  .valores {
+    font-size: 14px;
+    color: #444;
+    font-weight: 600;
+  }
+  
+  /* RESPONSIVIDADE */
+  
+  @media (max-width: 900px) {
+    .home-container {
+      padding: 20px 30px;
+    }
+  
+    .logo-area h1 {
+      font-size: 24px;
+    }
+  
+    .menu {
+      gap: 25px;
+    }
+  
+    .menu a {
+      font-size: 15px;
+    }
+  
+    .cards {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+  
+    .card {
+      padding: 20px 15px;
+      min-height: 130px;
+    }
+  
+    .meta-faturamento .titulo {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .home-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  
+    .empresa-info {
+      font-size: 14px;
+    }
+  
+    .menu {
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 10px 0;
+    }
+  
+    .menu a {
+      font-size: 14px;
+    }
+  
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .card {
+      min-height: auto;
+    }
+  
+    .barra {
+      height: 18px;
+    }
+  
+    .porcentagem {
+      top: -24px;
+      font-size: 13px;
+    }
+  }
